@@ -2,11 +2,7 @@ var f5 = function (obj) {
     var copyObj = {};
     for (var key in obj){
         if (typeof(obj[key])==="object"){
-            var deepCopy = {};
-            for (var deepKey in obj[key]){
-                deepCopy[deepKey] = obj[key][deepKey];
-            }
-            copyObj[key] = deepCopy;
+            copyObj[key] = f5(obj[key]);
         }else{
             copyObj[key] = obj[key];
         }
@@ -16,7 +12,7 @@ var f5 = function (obj) {
 
 
 var obj1 = {
-    a:{a1:3, a2:4},
+    a:{a1:3, a2:{ a21:3, a22:4}},
     b:3
 }
 
