@@ -1,5 +1,5 @@
 function add(number1,number2){
-    var prom = new Number();
+    var prom;
     prom = number1 + number2;
     number1 = prom.toFixed(3);
     return Number(prom);

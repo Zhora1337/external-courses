@@ -1,6 +1,6 @@
 function charDetect(string){
-    var _str = new String(string);
-    var count = new Array;
+    var _str = string;
+    var count = 0;
     for (var i=0; i<_str.length;i++){
         count = 0;
         for (var j=0; j<_str.length;j++){

@@ -1,5 +1,5 @@
 function insertString(string1,string2,number){
-    var _str = new String(string1);
+    var _str = string1;
     var exitString ="";
     _str = _str.split(" ");
     for (var i=0; i<_str.length; i++){

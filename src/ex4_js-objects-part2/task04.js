@@ -1,8 +1,8 @@
 var str = "hello world";
 function upperFirstChar(string){
-    var _string = new String(string);
-    var _otherChars = _string.slice(1);
-    string = _string[0].toUpperCase();
-    return string+_otherChars;
+    var str = string;
+    var otherChars = str.slice(1);
+    string = str[0].toUpperCase();
+    return string+otherChars;
 }
 console.log(upperFirstChar(str));

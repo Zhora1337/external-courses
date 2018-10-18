@@ -1,5 +1,5 @@
 function points(string,number){
-    var _str = new String(string);
+    var _str =string;
     if (_str.length>number){
         _str = _str.slice(0,number);
         _str = _str.concat("...");

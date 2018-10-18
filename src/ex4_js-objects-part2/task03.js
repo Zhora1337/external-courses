@@ -1,7 +1,6 @@
 var str = " hello world ";
 function deleteSpaces(string){
-    var _string = new String(string);
-    string = _string.trim();
+    string = string.trim();
     return string;
 }
 
