@@ -4,5 +4,4 @@ var f2 = function (arr){
 	console.log("Numbers =",i);
 }
 
-
 f2([3,4,5,6,7,8,100]);

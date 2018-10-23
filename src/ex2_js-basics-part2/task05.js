@@ -5,5 +5,4 @@ var f5 = function(arr) {
 	}
 	console.log(max);
 }
-
 f5([12,-3,56,14]);
