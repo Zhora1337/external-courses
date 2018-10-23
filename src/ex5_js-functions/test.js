@@ -4,16 +4,40 @@ var Calculator = (function() {
        console.log(result);
     }
     var _add = function(operand){
+        if (arguments.length=== 0){
+            return;
+        }
         result+=operand;
+        return function(){
+            _add(operand);
+        }
     }
     var _subtract = function(operand){
+        if (arguments.length=== 0){
+            return;
+        }
         result-=operand;
+        return function(){
+            _subtract(operand);
+        }
     }
     var _multiply = function(operand){
+        if (arguments.length=== 0){
+            return;
+        }
         result*=operand;
+        return function(){
+            _multiply(operand);
+        }
     }
     var _divide = function(operand){
+        if (arguments.length=== 0){
+            return;
+        }
         result/=operand;
+        return function(){
+            _divide(operand);
+        }
     }
     var _reset = function(){
         result = 0;
@@ -56,7 +80,7 @@ var Calculator = (function() {
 })();
 
 Calculator.getResult();
-Calculator.add(3);
+Calculator.add(2)();
 Calculator.getResult();
 Calculator.subtract(1);
 Calculator.getResult();
