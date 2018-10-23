@@ -1,7 +1,7 @@
-var f5 = function(numbers) {
-	var max = numbers[0];
-	for (var i = 0; i<numbers.length; i++){
-		if (max<numbers[i]) max = numbers[i];
+var f5 = function(arr) {
+	var max = arr[0];
+	for (var i = 0; i<arr.length; i++){
+		if (max<arr[i]) max = arr[i];
 	}
 	console.log(max);
 }

@@ -1,12 +1,12 @@
-var f4 = function(numbers){
-	var k = true;
-	for (var i = 1;i<numbers.length;i++){
-		if (k) {
-			if	(numbers[i-1]!==numbers[i]) k = false;
+var f4 = function(arr){
+	for (var i = 1;i<arr.length;i++){
+		if (arr[0]!=arr[i]){
+			return false;
 		}
 	}
-	console.log(k);
+	return true;
 }
 
-f4([0,0,0,0]);
-f4([1,0,1,0]);
+console.log(f4([0,0,0,0]));
+console.log(f4([1,0,1,0]));
+console.log(f4([1,1,1]));

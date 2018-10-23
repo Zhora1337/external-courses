@@ -1,6 +1,6 @@
-var f2 = function (numbers){
-	for (var i = 0; i<numbers.length;i++)
-		console.log(numbers[i]);
+var f2 = function (arr){
+	for (var i = 0; i<arr.length;i++)
+		console.log(arr[i]);
 	console.log("Numbers =",i);
 }
 
