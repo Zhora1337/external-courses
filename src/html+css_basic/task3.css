@@ -1,0 +1,40 @@
+#first {
+    padding:40px;
+    border:2px solid red;
+    max-width:40px;
+}
+
+#second {
+    padding:40px;
+    max-width:40px;
+    border-radius: 8px;
+    border-color: black;
+    border:3px dotted;
+}
+
+#third {
+    padding:40px;
+    max-width:40px;
+    border-radius:8px;
+    border:4px inset #3f1;
+}
+
+#fourth {
+    padding:40px;
+    max-width:40px;
+}
+#fourth:hover{
+    border-radius:10px;
+    border:4px outset #ff1;
+}
+
+#fifth {
+    padding:40px;
+    max-width:40px;
+}
+
+#fifth:hover {
+    background-color:black;
+    color:white;
+    border-radius:12px;
+}
