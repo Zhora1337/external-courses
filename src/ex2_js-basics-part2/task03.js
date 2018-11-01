@@ -1,8 +1,9 @@
 var f3 = function(arr){
 	var even = 0;
 	var odd = 0;
-	var zeros = 0;
-	for (var i = 0; i<arr.length; i++){
+    var zeros = 0;
+    var i;
+	for ( i = 0; i<arr.length; i++){
 		if (arr[i]===0) {
             zeros++;
         }else if ((arr[i] % 2)===0) {

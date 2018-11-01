@@ -1,6 +1,7 @@
 var f4 = function(arr){
-	for (var i = 1;i<arr.length;i++){
-		if (arr[0]!=arr[i]){
+	var i;
+	for (i = 1;i<arr.length;i++){
+		if (arr[0]!==arr[i]){
 			return false;
 		}
 	}
