@@ -22,19 +22,17 @@
 #fourth {
     padding:40px;
     max-width:40px;
+    box-shadow: 3px 5px gray;
+    margin-bottom:20px;
 }
-#fourth:hover{
-    border-radius:10px;
-    border:4px outset #ff1;
-}
+
 
 #fifth {
     padding:40px;
     max-width:40px;
+    outline-color:black;
+    outline-style:solid;
+    outline-width: 2px;
 }
 
-#fifth:hover {
-    background-color:black;
-    color:white;
-    border-radius:12px;
-}
+
