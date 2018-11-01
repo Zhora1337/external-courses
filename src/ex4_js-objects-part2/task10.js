@@ -1,7 +1,8 @@
-function inverStr(string){
+var inverStr=function(string){
     var _str = string;
+    var i;
     string = "";
-    for (var i=0; i<_str.length;i++){
+    for (i=0; i<_str.length;i++){
         string = string + _str[_str.length-i-1];
     }
     return string;

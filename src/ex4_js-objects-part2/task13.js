@@ -1,4 +1,4 @@
-function rand(min, max) {
+var rand=function(min, max) {
     return Math.random() * (max - min) + min;
   }
-  console.log(rand(0, 100));
+console.log(rand(0, 100));

@@ -1,5 +1,5 @@
 var str = " hello world ";
-function deleteSpaces(string){
+var deleteSpaces=function (string){
     string = string.trim();
     return string;
 }

@@ -1,8 +1,9 @@
-function insertString(string1,string2,number){
+var insertString=function(string1,string2,number){
     var _str = string1;
     var exitString ="";
+    var i;
     _str = _str.split(" ");
-    for (var i=0; i<_str.length; i++){
+    for (i=0; i<_str.length; i++){
         if (i===number){
             exitString = exitString + string2 + " ";
         }
@@ -10,6 +11,4 @@ function insertString(string1,string2,number){
     }
     return exitString;
 }
-
-
 console.log(insertString ("Hello friend","my dear",1));

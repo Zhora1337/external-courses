@@ -1,5 +1,5 @@
 var str = "hello world";
-function upperFirstChar(string){
+var upperFirstChar=function (string){
     var str = string;
     var otherChars = str.slice(1);
     string = str[0].toUpperCase();
