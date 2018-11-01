@@ -1,6 +1,7 @@
 var f5 = function (obj) {
     var copyObj = {};
-    for (var key in obj){
+    var key;
+    for (key in obj){
         if (typeof(obj[key])==="object"){
             copyObj[key] = f5(obj[key]);
         }else{
@@ -9,14 +10,9 @@ var f5 = function (obj) {
     }
     return copyObj;
 }
-
-
 var obj1 = {
     a:{a1:3, a2:{a21:3, a22:4}},
     b:3
 }
-
 var obj2 = f5(obj1);
-
-
 console.log(obj2);
