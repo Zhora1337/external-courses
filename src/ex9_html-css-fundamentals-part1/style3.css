@@ -1,6 +1,4 @@
-a {
-    
-}
+
 .border {
     width:208px;
     height:54px;
@@ -16,16 +14,6 @@ a {
     border-radius:15px;
     border:1px solid silver;
 }
-
-/*.second_slice {
-    position:relative;
-    top:4px;
-    border-radius:10px;
-    left:4px;
-    width:206px;
-    height:52px;
-    background-color:#000;
-}*/
 
 .front {
     position:relative;
