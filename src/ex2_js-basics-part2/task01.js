@@ -1,7 +1,6 @@
 var f1 = function (a){
 	console.log(typeof a);
 }
-
 f1(3);
 f1("Hello!");
 f1(true);

@@ -6,6 +6,5 @@ var f4 = function(arr){
 	}
 	return true;
 }
-
 console.log(f4([1,0,1,0]));
 console.log(f4([1,1,1]));

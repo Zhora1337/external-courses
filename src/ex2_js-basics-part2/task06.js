@@ -5,9 +5,6 @@ var f6 = function(number){
 	}
 	if (count <= 2) console.log("Число ", number, " - простое"); else console.log("Число ", number, " - составное");
 }
-
-
-
-f6(13);
+f6(17);
 f6(31);
 f6(32);
