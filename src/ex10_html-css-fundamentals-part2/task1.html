@@ -1,0 +1,77 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="task1.css">
+        <title>Task 1</title>
+    </head>
+    <body>
+        <form action="http://httpbin.org/" method="GET">
+            <div class="personal_data">
+                Surname
+                <input type="text" name="surname">
+                <br/>
+                First name
+                <input type="text" name="first_name">
+                <br/>
+                Middle name
+                <input type="text" name="middle_name">
+                <br/>
+                You are
+                <input type="radio" name="male" value="m"> male
+                <input type="radio" name="male" value="f"> female
+                <br/>
+                Age
+                <input type="number" name ="age" min="18" max="101" width="30px" value="18">
+                <br/>
+                Country of Residence
+                <select name="country">
+                    <option>Russia</option>
+                    <option>Ukraine</option>
+                    <option>Belarus</option>
+                </select>
+                <br/>
+                City
+                <input type="checkbox" name="city" value="Ryazan">Ryazan
+                <input type="checkbox" name="city" value="Moscow">Moscow
+                <br/>
+                Photography
+                <input type="file" name="photo">
+                <hr/>
+                Title
+                <select name="title" size=8 multiple>
+                    <optgroup label="Technologies">
+                        <option>Web Master</option>
+                        <option>Database Administrator</option>
+                        <option>Computer-aided design</option>
+                    </optgroup>
+                    <optgroup label="Finance">
+                        <option>Economic Planning</option>
+                        <option>Managment accounting</option>
+                        <option>Budgeting and planning</option>
+                    </optgroup>
+                </select>
+                <br/>
+                Salary
+                <input type="range" name="salary" aria-valuemin="100" aria-valuemax="1000">
+                <br/>
+                <textarea name="feedback" placeholder="Tell us about yourself..."></textarea>
+            </div>
+            <div class="contact_info">
+                Site
+                <input type="url" name="site">
+                <br/>
+                Email
+                <input type="email" name="mail">
+                <br/>
+                Phone
+                <input type="tel" name="phone">
+            </div>
+            Password
+            <input type="password">
+            <br/>
+            <input type="submit" value="Отправить">
+            <input type="button" value="Сбросить">
+        </form>
+    </body>
+</html>

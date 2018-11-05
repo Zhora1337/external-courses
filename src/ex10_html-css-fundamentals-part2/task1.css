@@ -1,0 +1,26 @@
+.personal_data{
+    margin-bottom: 15px;
+    border: 1px solid silver;
+    padding:10px;
+}
+
+
+.personal_data select{
+    margin-bottom:10px;
+}
+
+textarea {
+    width:180px;
+    height: 100px;
+}
+
+.contact_info {
+    border:1px solid silver;
+    padding: 10px; 
+}
+
+
+input {
+    margin-bottom:10px;
+    margin-top:10px; 
+}
