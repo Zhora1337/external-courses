@@ -1,0 +1,49 @@
+.head {
+    background-color:#e3eaf3;
+    color:#778697;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left:3px;
+    padding-right:3px;
+}
+
+#tab {
+    border: 2px solid white;
+}
+
+
+.col__first {
+    text-transform: capitalize;
+}
+
+.col__second {
+    quotes: "(" ") ";
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#code::before {
+    content:open-quote;
+}
+
+#code::after {
+    content:close-quote;
+}
+
+.col__fourth {
+    quotes: "\0024" ""
+}
+
+.col__fourth::before {
+    content: open-quote;
+}
+
+.col {
+    padding:15px 20px;
+}
+
+
+
+
+
+

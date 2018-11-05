@@ -1,0 +1,13 @@
+.row:nth-child(2n) {
+    background-color: #e8edf4;
+    color:#8d647e;
+}
+
+.row:nth-child(2n+1) {
+    background-color:#f2f6fa;
+    color:#8d647e;
+}
+
+.row:hover {
+    background-color: #e2e5e9;
+}
