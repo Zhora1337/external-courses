@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic');
+table {
+    border: 2px solid white;
+    font-family: 'Open Sans';
+}
+
+th {
+    background: #e3eaf3;
+}
+.col_1 {
+    text-transform: capitalize;
+}
+
+.col_2 {
+    quotes: "(" ")";
+}
+
+.col_2::before{
+    content:open-quote;
+}
+
+.col {
+    padding:5px 10px;
+}
+
+.col_4 {
+    quotes:"$ " "";
+}
+
+.col_4::before{
+    content:open-quote;
+}
