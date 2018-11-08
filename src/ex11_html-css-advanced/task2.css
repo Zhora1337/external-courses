@@ -1,0 +1,151 @@
+
+
+.loader {
+    height:76px;
+    width:76px;
+    margin-left:calc(50% - 38px);
+    position: absolute;
+    top:0;
+    border-radius: 100%;
+}
+
+.loader_circle {
+    height:16px;
+    width:16px;
+    background: green;
+    border-radius:100%;
+    animation-name:load;
+    animation-iteration-count: infinite;
+    animation-duration: 2.5s;
+    animation-direction: normal;
+}
+
+
+@keyframes load {
+    0%,100% {
+        margin-left:0;
+        margin-top:0;
+        background:green;
+    }
+    25%{
+        margin-left:calc(100% - 16px);
+        margin-top:0;
+        background:red;
+    }
+    50%{
+        margin-top:calc(100% - 16px);
+        margin-left:calc(100% - 16px);
+        background:blue;
+    }
+    75%{
+        margin-top:calc(100% - 16px);
+        margin-left:0;
+        background:yellow;
+    }
+}
+
+.bounce {
+    margin-top:150px;
+}
+
+.bounce > div {
+    display:inline-block;
+}
+
+.area{
+    background:yellow;
+    width:230px;
+    height:100px;
+}
+
+.ball {
+    margin-top:calc(25% - 15px);
+    background:red;
+    height: 30px;
+    width:30px;
+    border-radius:50%;
+    animation-name:bounce;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.wall {
+    height:100px;
+    width:30px;
+    background:green;
+}
+
+@keyframes bounce {
+    0%{
+        margin-top:10px;
+        margin-left:0%;
+    }
+    25%{
+        margin-top:70px;
+        margin-left:50px;
+    }
+    50%{
+        margin-top:10px;
+        margin-left:100px;
+    }
+    75%{
+        margin-top:70px;
+        margin-left:150px;
+    }
+    100%{
+        margin-top:10px;
+        margin-left:200px;
+    }
+}
+
+.animation {
+    margin-top:70px;
+    border-radius:50%;
+    height:100px;
+    width:100px;
+    background:linear-gradient(to right, blue, red);
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;   
+    animation-name:anim;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes anim {
+    0% {
+        border-radius:50%;
+        height:100px;
+        width:100px;
+        background:linear-gradient(to right, blue, red);
+    }
+    20% {
+        border-radius:0%;
+    }
+    40% {
+        background:linear-gradient(to bottom, blue,red);
+        
+    }
+    60%{
+        height: 70px;
+        width:200px;
+    }
+    80%{
+        transform: rotate(60deg);
+    }
+    90%{
+        background: radial-gradient(black, white);
+    }
+    to {
+        height:100px;
+        width:100px;
+        border-radius: 50%;
+    }
+
+}
+
+
