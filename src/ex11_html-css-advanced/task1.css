@@ -1,0 +1,16 @@
+div {
+    display: inline;
+}
+img {
+    width:256px;
+    max-height: 256px;
+}
+
+#first {
+    border-radius: 100%;
+}
+
+#second {
+    -webkit-mask-image: url(http://s1.iconbird.com/ico/1012/ColobrushIcons/w256h2561350817752firefox.png);
+
+}
