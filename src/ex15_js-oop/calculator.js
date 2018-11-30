@@ -1,10 +1,19 @@
-function Calculator() {
-    this.type = "Simple Calculator";
+function Calculator(type) {
+    this.type = type;
     this.result = 0;
 }
 
+
+Calculator.prototype.showType = function(){
+    console.log("This is a " + this.getType());
+}
+
+Calculator.prototype.showResult = function() {
+    console.log("Result = " + this.getResult());
+}
+
 Calculator.prototype.getType = function() {
-    console.log(this.type);
+    return this.type;
 }
 
 Calculator.prototype.add = function(operand) {
@@ -24,7 +33,7 @@ Calculator.prototype.divide = function(operand) {
 }
 
 Calculator.prototype.getResult = function() {
-    console.log(this.result);
+    return this.result;
 }
 
 Calculator.prototype.reset = function() {
@@ -32,77 +41,77 @@ Calculator.prototype.reset = function() {
 }
 
 
-var calculator = new Calculator;
+var calculator = new Calculator("Simple Calculator");
 
-calculator.getType();
-calculator.getResult();
+calculator.showType();
+calculator.showResult();
 calculator.add(5);
-calculator.getResult();
+calculator.showResult();
 calculator.subtract(3);
-calculator.getResult();
+calculator.showResult();
 calculator.multiply(5);
-calculator.getResult();
+calculator.showResult();
 calculator.divide(2);
-calculator.getResult();
+calculator.showResult();
 calculator.reset();
-calculator.getResult();
+calculator.showResult();
 
-function EngeneeringCalculator(){
-    this.type = "Engeneering Calculator";
-    this.result = 0;
+function EngeneeringCalculator(type, result){
+    Calculator.apply(this, arguments);
 }
 
 EngeneeringCalculator.prototype = Object.create(Calculator.prototype);
+EngeneeringCalculator.prototype.constructor = EngeneeringCalculator;
 
 
 EngeneeringCalculator.prototype.sqrt = function() {
     this.result = Math.sqrt(this.result);
 }
 
-calculator = new EngeneeringCalculator;
+calculator = new EngeneeringCalculator("Engeneering Calculator", 0);
 
-calculator.getType();
-calculator.getResult();
+calculator.showType();
+calculator.showResult();
 calculator.add(5);
 calculator.getResult();
 calculator.subtract(3);
-calculator.getResult();
+calculator.showResult();
 calculator.multiply(8);
-calculator.getResult();
+calculator.showResult();
 calculator.sqrt()
-calculator.getResult();
+calculator.showResult();
 calculator.reset();
-calculator.getResult();
+calculator.showResult();
 
 function TriganometricCalculator () {
-    this.type = "Triganometric Calculator";
-    this.result = 0;
+    Calculator.apply(this, arguments);
 }
 
 TriganometricCalculator.prototype = Object.create(Calculator.prototype);
+TriganometricCalculator.prototype.constructor = TriganometricCalculator;
 
 TriganometricCalculator.prototype.getCos = function() {
-    console.log (Math.cos(this.result * 180 / Math.PI));
+    return Math.cos(this.result * 180 / Math.PI);
 }
 
 TriganometricCalculator.prototype.getSin = function() {
-    console.log (Math.sin(this.result * 180 / Math.PI));
+    return Math.sin(this.result * 180 / Math.PI);
 }
 
 TriganometricCalculator.prototype.getTan = function() {
-    console.log (Math.tan(this.result * 180 / Math.PI));
+    return Math.tan(this.result * 180 / Math.PI);
 }
 
 TriganometricCalculator.prototype.getCot = function() {
-    console.log (Math.pow(Math.tan(this.result * 180 / Math.PI), -1));
+    return Math.pow(Math.tan(this.result * 180 / Math.PI), -1);
 }
 
-calculator = new TriganometricCalculator;
+calculator = new TriganometricCalculator("Triganometric Calculator", 0);
 
-calculator.getType();
+calculator.showType();
 calculator.add(5);
-calculator.getCos();
-calculator.getSin();
-calculator.getTan();
-calculator.getCot();
+console.log("cos = " + calculator.getCos());
+console.log("sin = " + calculator.getSin());
+console.log("tan = " + calculator.getTan());
+console.log("ctg = " + calculator.getCot());
 calculator.reset();
