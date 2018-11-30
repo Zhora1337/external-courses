@@ -1,33 +1,42 @@
 function Shape(type) {
     this.type = type;
+    this.FOUR = 4;
+}
+
+Shape.prototype.showPerimetr = function() {
+    console.log("Perimetr = " + this.getPerimetr())
+}
+
+Shape.prototype.showType = function(){
+    console.log("This is a " + this.getType());
 }
 
 Shape.prototype.getType = function() {
-    console.log(this.type);
+    return this.type;
 }
 
 Shape.prototype.getPerimetr = function() {
-    console.log("Sides are not defined");
+    return"Sides are not defined";
 }
 
 Shape.prototype.draw = function(){
     console.log(this.type + " is drawn");
 }
 
-function Triangle(a,b,c) {
-    this.type = "Triangle";
+function Triangle(type,a,b,c) {
+    Shape.apply(this, arguments);
     this.a = a;
     this.b = b;
     this.c = c;
 }
 
-function Square(a) {
-    this.type = "Square";
-    this.a = a;
+function Square(type, a) {
+    Shape.apply(this, arguments);
+    this.a = a; 
 }
 
-function Diamond(a, firstAngle){
-    this.type = "Diamond";
+function Diamond(type, a, firstAngle){
+    Shape.apply(this, arguments);
     this.a = a;
     this.firstAngle = firstAngle;
     this.secondAngle = 180 - firstAngle;
@@ -35,44 +44,55 @@ function Diamond(a, firstAngle){
 
 
 Diamond.prototype = Object.create(Shape.prototype);
+Diamond.prototype.constructor = Diamond;
+
 Square.prototype = Object.create(Shape.prototype);
+Square.prototype.constructor = Square;
+
 Triangle.prototype = Object.create(Shape.prototype);
+Triangle.prototype.constructor = Triangle;
+
+
+
+
 Triangle.prototype.getPerimetr = function(){
-    this.perimetr = this.a + this.b + this.c;
-    console.log("Perimetr = " + this.perimetr);
+    return this.a + this.b + this.c;
 }
 Square.prototype.getPerimetr = function(){
-    this.perimetr = 4 * this.a;
-    console.log("Perimetr = " + this.perimetr);
+    return this.FOUR * this.a;
 }
 Diamond.prototype.getPerimetr = function(){
-    this.perimetr = 4 * this.a;
-    console.log("Perimetr = " + this.perimetr);
+    return this.FOUR * this.a;
 }
 Diamond.prototype.getArea = function(){
-    this.area = this.a * (Math.sqrt(this.a*this.a-(this.a*this.a)/4));
-    console.log("Area = " + this.area);
+    return this.a * (Math.sqrt(this.a*this.a-(this.a*this.a)/4));
 }
-Diamond.prototype.getAngles = function(){
+Diamond.prototype.showArea = function(){
+    console.log("Area of " + this.getType() + " = " + this.getArea());
+}
+
+Diamond.prototype.showAngles = function(){
     console.log("First angle = " + this.firstAngle + " Second angle = " + this.secondAngle);
 }
 
-var triangle = new Triangle(3,5,4);
+var triangle = new Triangle("Triangle",3,5,4);
 
-triangle.getType();
-triangle.getPerimetr();
+triangle.showType();
+triangle.showPerimetr();
 triangle.draw();
 
-var square = new Square(4);
+var square = new Square("Square", 4);
 
-square.getType();
-square.getPerimetr();
+square.showType();
+square.showPerimetr();
 square.draw();
 
-var diamond = new Diamond(5,65);
+var diamond = new Diamond("Diamond",5,60);
 
-diamond.getType();
-diamond.getAngles();
-diamond.getArea();
-diamond.getPerimetr();
+diamond.showType();
+diamond.showAngles();
+diamond.showArea();
+diamond.showPerimetr();
 diamond.draw();
+
+
