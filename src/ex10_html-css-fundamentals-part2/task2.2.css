@@ -1,0 +1,11 @@
+.row:nth-child(2n+1){
+    background: #e8edf4;
+}
+
+.row:nth-child(2n) {
+    background: #f2f6fa;
+}
+
+.row:hover {
+    background: #e2e5e9;
+}
