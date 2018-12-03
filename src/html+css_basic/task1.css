@@ -1,0 +1,30 @@
+#firstDiv {
+    background-color: #ff0;
+    height:70px;
+}
+table{
+    margin-bottom:50px;
+}
+a {
+    background-color: #fff;
+    text-decoration:none;
+    color:#f00;
+    font-size:2.5em;
+    border-radius:10px;
+    border:4px solid #f00;
+    padding:4px;
+    margin-bottom:10px;
+    min-width:100%;
+}
+
+a:hover{
+    background-color:#f00;
+    color:#fff;
+}
+
+.url {
+    margin-bottom: 15px;
+}
+img{
+    margin-bottom:15px;
+}

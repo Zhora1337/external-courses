@@ -1,0 +1,38 @@
+#first {
+    padding:40px;
+    border:2px solid red;
+    max-width:40px;
+}
+
+#second {
+    padding:40px;
+    max-width:40px;
+    border-radius: 8px;
+    border-color: black;
+    border:3px dotted;
+}
+
+#third {
+    padding:40px;
+    max-width:40px;
+    border-radius:8px;
+    border:4px inset #3f1;
+}
+
+#fourth {
+    padding:40px;
+    max-width:40px;
+    box-shadow: 3px 5px gray;
+    margin-bottom:20px;
+}
+
+
+#fifth {
+    padding:40px;
+    max-width:40px;
+    outline-color:black;
+    outline-style:solid;
+    outline-width: 2px;
+}
+
+
