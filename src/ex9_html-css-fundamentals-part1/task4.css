@@ -1,0 +1,26 @@
+.horse {
+    display:grid;
+    grid-template-columns: repeat(3, 30px);
+    grid-template-rows: repeat(3, 30px);
+}
+
+.box {
+    border:1px solid black;
+}
+label{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+  
+input{
+    opacity: 0;
+    position: absolute;
+}
+
+input[type="checkbox"]:checked+span{
+    opacity: 1;
+}
+span{
+    opacity: 0;
+}
